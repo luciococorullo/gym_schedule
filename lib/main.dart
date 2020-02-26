@@ -26,7 +26,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         title: Text('Schede palestra'),
-        backgroundColor: Colors.teal,
+        backgroundColor: Color.fromRGBO(36, 33, 33, 1),
         bottom: TabBar(
           isScrollable: true,
           tabs: [
@@ -64,29 +64,35 @@ class Esercizio extends StatefulWidget {
 
 class _EsercizioState extends State<Esercizio> {
   bool isDone = false;
+  _pressed() {
+    setState(() {
+      isDone = !isDone;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
-        elevation: 20,
-        color: Colors.blueGrey[200],
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        elevation: 8,
+        color: Colors.white, //Color.fromRGBO(248, 243, 227, 1),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: ListTile(
             title: Text(
               widget.nome,
               style: TextStyle(
-                  color: Colors.grey[700],
-                  fontSize: 25,
+                  color: Colors.black,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Montserrat'),
             ),
             subtitle: Text(widget.ripetizioni),
             leading: SizedBox(
-              width: 140,
+              width: 100,
               height: 300,
               child: widget.photo,
             ),
             trailing: Checkbox(
-              activeColor: Colors.black,
+              activeColor: Color.fromRGBO(255, 32, 71, 1),
               value: isDone,
               onChanged: (bool value) {
                 setState(() {

@@ -10,54 +10,56 @@ class _PrimoState extends State<Primo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.teal[300],
-        body: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: CustomScrollView(
-            slivers: <Widget>[
-              SliverList(
-                delegate: SliverChildListDelegate(
-                  [
-                    Esercizio(
-                        nome: "Crunch Incrociate",
-                        ripetizioni: "3x15",
-                        photo: Image.asset('assets/images/crunch.png')),
-                    Esercizio(
-                        nome: "Crunch tese",
-                        ripetizioni: "3x15",
-                        photo: Image.asset('assets/images/crunch.png')),
-                    Esercizio(
-                        nome: "Crunch laterali",
-                        ripetizioni: "3x15",
-                        photo: Image.asset('assets/images/crunch.png')),
-                    Esercizio(
-                        nome: "Lento Manubri",
-                        ripetizioni: "4x10",
-                        photo: Image.asset('assets/images/crunch.png')),
-                    Esercizio(
-                        nome: "Alzate Laterali",
-                        ripetizioni: "4x10",
-                        photo: Image.asset('assets/images/crunch.png')),
-                    Esercizio(
-                        nome: "LowLow Larga",
-                        ripetizioni: "4x10",
-                        photo: Image.asset('assets/images/crunch.png')),
-                    Esercizio(
-                        nome: "Leg Extension",
-                        ripetizioni: "4x10",
-                        photo: Image.asset('assets/images/crunch.png')),
-                    Esercizio(
-                        nome: "Leg Curl",
-                        ripetizioni: "4x10",
-                        photo: Image.asset('assets/images/crunch.png')),
-                    Esercizio(
-                        nome: "Leg Press",
-                        ripetizioni: "4x10",
-                        photo: Image.asset('assets/images/crunch.png'))
-                  ],
-                ),
-              )
-            ],
+        backgroundColor: Color.fromRGBO(248, 194, 92, 1),
+        body: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.only(top: 15.0, left: 10, right: 10),
+            child: CustomScrollView(
+              slivers: <Widget>[
+                SliverList(
+                  delegate: SliverChildListDelegate(
+                    [
+                      Esercizio(
+                          nome: "Tappeto",
+                          ripetizioni: "15 minuti",
+                          photo: Image.asset('assets/images/cardio.png')),
+                      Esercizio(
+                          nome: "Crunch gambe alte",
+                          ripetizioni: "3x15",
+                          photo: Image.asset('assets/images/crunchalte.jpg')),
+                      Esercizio(
+                          nome: "Crunch su inclinata",
+                          ripetizioni: "3x15",
+                          photo: Image.asset('assets/images/crunchbas.jpg')),
+                      Esercizio(
+                          nome: "Crunch sx-dx",
+                          ripetizioni: "3x15",
+                          photo: Image.asset('assets/images/crunch.png')),
+                      Esercizio(
+                          nome: "Bilanciere panca orizzontale",
+                          ripetizioni: "4x10",
+                          photo: Image.asset('assets/images/bilanciere.jpg')),
+                      Esercizio(
+                          nome: "Chest press inclinata",
+                          ripetizioni: "4x10",
+                          photo: Image.asset('assets/images/chest.jpg')),
+                      Esercizio(
+                          nome: "Tappeto",
+                          ripetizioni: "5 minuti",
+                          photo: Image.asset('assets/images/cardio.png')),
+                      Esercizio(
+                          nome: "Fune",
+                          ripetizioni: "4x10",
+                          photo: Image.asset('assets/images/crunch.png')),
+                      Esercizio(
+                          nome: "French Press manubri",
+                          ripetizioni: "4x10",
+                          photo: Image.asset('assets/images/french.png')),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ));
   }
